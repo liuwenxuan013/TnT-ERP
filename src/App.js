@@ -2,8 +2,8 @@ import React from 'react';
 import MaterialTable from 'material-table';
 import './App.css';
 import firebase  from "firebase";
-function App() {
 
+function App() {
     var firebaseConfig = {
         apiKey: "AIzaSyARzNyqPUHJJu1Gevojuu_lUqhXSII-hM0",
         authDomain: "tnt-erp.firebaseapp.com",
@@ -18,16 +18,18 @@ function App() {
         firebase.initializeApp(firebaseConfig);
     }
 
-    const [data, setData] =React.useState([])
-    React.useEffect(async () => {
-        const fn = firebase.functions()
-         fn.useFunctionsEmulator('http://localhost:5001')
-        const fetchERPdatabase = fn.httpsCallable("getERPdatabase")
+    const fn = firebase.functions();
+    fn.useFunctionsEmulator('http://localhost:5001')
+    const fetchERPdatabase = fn.httpsCallable("getERPdatabase")
 
+    const [data, setData] =React.useState([])
+
+    React.useEffect( () => {
+    (async()=>{
         const erpData = await fetchERPdatabase()
         console.log(erpData.data)
-
         setData(erpData.data)
+    })()
     },[])
 
             return (
@@ -35,13 +37,18 @@ function App() {
             <MaterialTable
                 title="Data review"
                 columns={[
-
                     { title: 'Id', field: 'id' },
                     { title: 'Card Number', field: 'reward_card_id' },
                     { title: 'Balance', field: 'balance' },
                 ]}
                 data={data}
+                editable={
+                    {onRowUpdate:(preState,newState)=>{
+                        console.log(preState,'\n',newState);}
 
+
+                    }
+                }
             />
         </div>
     );
