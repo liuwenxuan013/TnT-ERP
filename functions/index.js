@@ -20,19 +20,20 @@ exports.getERPdatabase = functions.https.onCall(
             // Flatten the table
             console.log('Query result: ', result)
 
-            let flattened = []
+            let flattened = result.recordset
 
-            result
-                .forEach(r => {
-                console.log('Each time forEach strucks: ', r)
-                flattened.push(
-                    {
-                        id: r.id,
-                        reward_card_id: r.reward_card_id,
-                        balance: r.balance,
-                    }
-                )
-            })
+            // result
+            //     .forEach(r => {
+            //     console.log('Each time forEach strucks: ', r)
+            //     flattened.push(
+            //         {
+            //             id: r.id,
+            //             reward_card_id: r.reward_card_id,
+            //             balance: r.balance,
+            //         }
+            //     )
+            // })
+
 
             return flattened
         }
