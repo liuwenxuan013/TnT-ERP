@@ -19,9 +19,9 @@ function App() {
     }
 
     const [data, setData] =React.useState([])
-    React.useEffect(async ()=>{
+    React.useEffect(async () => {
         const fn = firebase.functions()
-       //fn.useFunctionsEmulator('http://localhost:5001')
+        fn.useFunctionsEmulator('http://localhost:5001')
 
         const fetchERPdatabase=  fn.httpsCallable("getERPdatabase")
 
