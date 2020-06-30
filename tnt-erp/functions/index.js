@@ -17,16 +17,24 @@ exports.getERPdatabase = functions.https.onCall(
 
            const result = await pool.query` select * from customer_offline_point`
 
-            //TODO: flatten the table
-            console.log(result)
-            // {
-            //     id: result.id,
-            //         reward_card_id: result.reward_card_id,
-            //     balance: result.balance,
-            // }
+            // Flatten the table
+            console.log('Query result: ', result)
 
+            let flattened = []
 
-            return result
+            result
+                .forEach(r => {
+                console.log('Each time forEach strucks: ', r)
+                flattened.push(
+                    {
+                        id: r.id,
+                        reward_card_id: r.reward_card_id,
+                        balance: r.balance,
+                    }
+                )
+            })
+
+            return flattened
         }
         catch(e) {
             console.log(e)
