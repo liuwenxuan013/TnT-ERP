@@ -21,15 +21,15 @@ function App() {
     const fn = firebase.functions();
     fn.useFunctionsEmulator('http://localhost:5001')
     const fetchERPdatabase = fn.httpsCallable("getERPdatabase")
-
+    const updateRecord = fn.httpsCallable("updateRecord")
     const [data, setData] =React.useState([])
+const updateTable= (async()=>{
+    const erpData = await fetchERPdatabase()
+    setData(erpData.data)
+})
 
-    React.useEffect( () => {
-    (async()=>{
-        const erpData = await fetchERPdatabase()
-        console.log(erpData.data)
-        setData(erpData.data)
-    })()
+    React.useEffect(() => {
+updateTable()
     },[])
 
             return (
@@ -43,8 +43,13 @@ function App() {
                 ]}
                 data={data}
                 editable={
-                    {onRowUpdate:(preState,newState)=>{
-                        console.log(preState,'\n',newState);}
+                    {onRowUpdate:async (newState,preState)=>{
+                        await updateRecord(newState)
+                        console.log(preState,'\n',newState);
+                        return updateTable();
+
+
+                    }
 
 
                     }

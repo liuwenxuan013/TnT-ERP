@@ -42,7 +42,21 @@ exports.getERPdatabase = functions.https.onCall(
         }
     }
 )
+exports.updateRecord=functions.https.onCall(
+    async (body,context)=>{
+        console.log(body)
+        const pool = new sql.ConnectionPool(config)
+        await pool.connect()
+        const result = await pool.query
+            `UPDATE tnterp.dbo.customer_offline_point 
+            SET balance = ${body.balance},
+            reward_card_id=${body.reward_card_id} 
+            WHERE id = ${body.id}`
 
+return 'success!'
+
+}
+)
 // exports.createProduct = functions.https.onCall(
 //     async (body, context)=>{
 //
