@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7711d01b-d560-49ee-a2a5-f1c3efd131c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tnt-erp/firebase-debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/firebase-debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/functions/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/functions/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/functions/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tnt-erp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/tnt-erp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,20 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tnt-erp/functions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="210">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tnt-erp/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="30" column="33" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="33" />
+            <state relative-caret-position="-31">
+              <caret line="55" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -50,9 +44,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tnt-erp/src/App.js" />
         <option value="$PROJECT_DIR$/tnt-erp/package.json" />
         <option value="$PROJECT_DIR$/tnt-erp/functions/index.js" />
+        <option value="$PROJECT_DIR$/tnt-erp/src/App.js" />
       </list>
     </option>
   </component>
@@ -92,7 +86,7 @@
               <item name="TnT-ERP" type="b2602c69:ProjectViewProjectNode" />
               <item name="TnT-ERP" type="462c0819:PsiDirectoryNode" />
               <item name="tnt-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TnT-ERP" type="b2602c69:ProjectViewProjectNode" />
@@ -138,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593454381823</updated>
-      <workItem from="1593454385463" duration="8054000" />
+      <workItem from="1593454385463" duration="13304000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1593461389305</created>
@@ -147,22 +141,29 @@
       <option name="project" value="LOCAL" />
       <updated>1593461389306</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fetch data from API(Azure Database)">
+      <created>1593531423327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593531423327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8054000" />
+    <option name="totallyTimeSpent" value="13304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49918568" visible="true" weight="0.32238805" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49918568" visible="true" weight="0.23582089" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5008143" side_tool="true" weight="0.36716416" />
       <window_info anchor="bottom" id="Messages" weight="0.3074627" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -183,7 +184,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="fetch data from API(Azure Database)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch data from API(Azure Database)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -202,16 +204,6 @@
     <entry file="file://$PROJECT_DIR$/tnt-erp/build/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tnt-erp/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tnt-erp/functions/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -221,15 +213,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tnt-erp/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="63">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tnt-erp/functions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="210">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tnt-erp/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="55" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
