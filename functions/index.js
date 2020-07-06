@@ -4,7 +4,7 @@ const config={
     user:'liuwenxuan',
     password:'120308032000qWe',
     server:'my-sql-dev-server.database.windows.net',
-    database:'tnterp'
+    database:'Dictionary'
 };
 
 
@@ -15,25 +15,12 @@ exports.getERPdatabase = functions.https.onCall(
             const pool = new sql.ConnectionPool(config)
             await pool.connect()
 
-           const result = await pool.query` select * from customer_offline_point`
+           const result = await pool.query` select * from dictionary`
 
             // Flatten the table
             console.log('Query result: ', result)
 
             let flattened = result.recordset
-
-            // result
-            //     .forEach(r => {
-            //     console.log('Each time forEach strucks: ', r)
-            //     flattened.push(
-            //         {
-            //             id: r.id,
-            //             reward_card_id: r.reward_card_id,
-            //             balance: r.balance,
-            //         }
-            //     )
-            // })
-
 
             return flattened
         }
@@ -48,30 +35,14 @@ exports.updateRecord=functions.https.onCall(
         const pool = new sql.ConnectionPool(config)
         await pool.connect()
         const result = await pool.query
-            `UPDATE tnterp.dbo.customer_offline_point 
-            SET balance = ${body.balance},
-            reward_card_id=${body.reward_card_id} 
+            `UPDATE dictionary.dbo.dictionary
+            SET term = ${body.term},
+            def=${body.def} ,
+            addition=${body.addition}
             WHERE id = ${body.id}`
 
 return 'success!'
 
 }
 )
-// exports.createProduct = functions.https.onCall(
-//     async (body, context)=>{
-//
-//         try {
-//             const pool = new sql.ConnectionPool(config)
-//             await pool.connect()
-//
-//             const result = await pool.query` insert dst_e_productPrice`
-//
-//             //TODO: flatten the table
-//
-//             return result;
-//         }
-//         catch(e) {
-//             console.log(e)
-//         }
-//     }
-// )
+

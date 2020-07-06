@@ -3,16 +3,18 @@ import MaterialTable from 'material-table';
 import './App.css';
 import firebase  from "firebase";
 
+
 function App() {
     var firebaseConfig = {
         apiKey: "AIzaSyARzNyqPUHJJu1Gevojuu_lUqhXSII-hM0",
         authDomain: "tnt-erp.firebaseapp.com",
        // databaseURL: "https://tnt-erp.firebaseio.com",
-        projectId: "tnt-erp",
+        projectId: "dictionary",
        // storageBucket: "tnt-erp.appspot.com",
        // messagingSenderId: "19946506813",
         appId: "1:19946506813:web:f0a0352de2690114a8b854"
     };
+    const cors = require('cors')({origin: true});
     // Initialize Firebase
     if(!firebase.apps.length){
         firebase.initializeApp(firebaseConfig);
@@ -23,7 +25,7 @@ function App() {
     const fetchERPdatabase = fn.httpsCallable("getERPdatabase")
     const updateRecord = fn.httpsCallable("updateRecord")
     const [data, setData] =React.useState([])
-const updateTable= (async()=>{
+    const updateTable= (async()=>{
     const erpData = await fetchERPdatabase()
     setData(erpData.data)
 })
@@ -38,8 +40,9 @@ updateTable()
                 title="Data review"
                 columns={[
                     { title: 'Id', field: 'id' },
-                    { title: 'Card Number', field: 'reward_card_id' },
-                    { title: 'Balance', field: 'balance' },
+                    { title: 'Term', field: 'term' },
+                    { title: 'Definition', field: 'def' },
+                    {title:'Addition',field:'addition'}
                 ]}
                 data={data}
                 editable={
